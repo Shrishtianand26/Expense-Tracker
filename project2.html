@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style2.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+    </header>
+
+    <main>
+    <div class="container">
+
+        <div class="section">
+        <h3> Total Balance</h3>
+            <span id="balance"> Rs 0.00</span>
+         </div>
+
+        <div class="row">
+        <div class="section-half">
+            <h3>Income</h3>
+            <span id="money-plus" class="money-plus"> Rs 0.00</span>
+            </div>
+
+            <div class="section-half">
+            <h3>Expense</h3>
+            <span id="money-minus" class="money-minus"> Rs 0.00</span>
+            </div>
+        </div>
+    </div>
+
+         <form id="form">
+            <div class="form-control">
+                <label for="text">Description</label>
+                <input type="text" id="text" placeholder="Enter name of transaction...">
+            </div>
+
+            <!-- <div class="form-control">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount...">
+            </div> -->
+
+     <div class="input-section">
+        <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount...">
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="option">Select an option</option>
+            <option value="option">Income</option>
+            <option value="Food & Beverage">Food & Beverage</option>
+            <option value="Rent">Rent</option>
+            <option value="Transport">Transport</option>
+            <option value="Relaxing">Relaxing</option>
+            <option value="Other">Other </option>
+        </select>
+
+        <!-- <label for="amount">Amount:</label>
+        <input type="number" id="amount"> -->
+        <label for="date">Date:</label>
+        <input type="date" id="date-input">
+    </div>
+
+       
+
+            <button class="btn">Add transaction</button>
+        </form>
+
+    <h2>History</h2>
+    <ul class="list"></ul>
+    
+
+    
+    </main>
+    <script src="app2.js"></script>
+    
+</body>
+</html>
