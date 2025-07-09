@@ -97,6 +97,17 @@
 //     dateInput.value = '';
 // }
 
+// // Init app
+// function init() {
+//     list.innerHTML = '';
+//     transactions.forEach(addTransactionDOM);
+//     updateValues();
+// }
+
+// // Event listener
+// form.addEventListener('submit', addTransaction);
+
+// init();
 
 const balance = document.getElementById('balance');
 const money_plus = document.getElementById('money-plus');
