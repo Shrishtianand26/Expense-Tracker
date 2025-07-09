@@ -22,6 +22,7 @@ body {
     font-style: normal;
 }
 
+
 header {
     background-color: #4a249d;
     color: #fff;
@@ -42,8 +43,10 @@ main{
     border-radius: 5px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
+
 
 .container {
     background-color: #baadf3;
@@ -186,4 +189,53 @@ input[type="number"] {
 
 .list li:hover .delete-btn {
     opacity: 1;
+}
+@media (max-width: 500px) {
+    main {
+        flex-direction: column;
+        max-width: 95%;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .list li {
+        font-size: 14px;
+    }
+
+    .delete-btn {
+        font-size: 16px;
+    }
+
+    header {
+        font-size: 1rem;
+        height: auto;
+        padding: 1rem;
+    }
 }
