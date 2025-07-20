@@ -1,108 +1,83 @@
-*{
-    padding: 0;
-    margin: 0;
-     box-sizing: border-box;
+ * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-
 
 body {
-    background-image: linear-gradient(
-        174.2deg,
-        rgba(255, 244, 228, 1) 7.1%,
-        rgba(240, 246, 238, 1) 67.4%
-    );
-    min-height: 100vh;
-    margin: 0;
-    font-family: "Lora", serif;
-    font-weight: 400;
-    font-style: normal;
+  background-image: linear-gradient(174.2deg, #fff4e4 7.1%, #f0f6ee 67.4%);
+  font-family: "Lora", serif;
+  min-height: 100vh;
 }
-
 
 header {
-    background-color: #4a249d;
-    color: #fff;
-    text-align: center;
-    height: 100px;
-    place-content: center;
-    width: 100%;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  background-color: #4a249d;
+  color: #fff;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-main{
-    max-width: 400px;
-    margin: 1rem auto;
-    background-color: antiquewhite;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+main {
+  max-width: 700px;
+  margin: 1rem auto;
+  background-color: antiquewhite;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
 }
-
 
 .container {
-    background-color: #baadf3;
-    width: 350px;
-    height: 200px;
-    padding:1rem;
-    text-align:center;
-    border-radius: 5px;
-    display:flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    
-
+  background-color: #baadf3;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 h2 {
-    border-bottom: 1px solid #bbb;
-    padding-bottom: 10px;
-    margin: 10px 0 10px;
-    display: block;
+  border-bottom: 1px solid #bbb;
+  margin: 10px 0;
+  padding-bottom: 10px;
 }
 
 h3 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .section {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  text-align: center;
 }
+
 .row {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 100%;
-  background-color: #fff;  
-  border-radius: 10px;  
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.section.half {
+.section-half {
   flex: 1;
 }
-.balance{
-    font-weight: bold;
-    color: #b614db;
-}
-.money {
-    font-size: 20px;
-    letter-spacing: 1;
-    margin: 5px 0;
-}
+
 .money-plus {
   color: green;
   font-weight: bold;
@@ -114,128 +89,185 @@ h3 {
 }
 
 label {
-    display: inline-block;
-    margin: 10px 0;
-    font-weight: 600;
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
 }
 
 input[type="text"],
-input[type="number"] {
-    border: 1px solid #dedede;
-    border-radius: 5px;
-    display: block;
-    font-size: 16px;
-    padding: 10px;
-    width: 100%;
+input[type="number"],
+input[type="date"],
+select {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
 }
 
 .btn {
-    cursor: pointer;
-    background: #4a249d;
-    color: #fff;
-    box-shadow: var(--box-shadow);
-    border: 0;
-    display: block;
-    font-size: 16px;
-    margin: 10px 0 30px;
-    padding: 15px;
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 2rem;
+  background: #4a249d;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: var(--box-shadow);
 }
 
-
 .list {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 40px;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
 .list li {
-    background-color: #fff;
-    box-shadow: var(--box-shadow);
-    color: #333;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    padding: 10px;
-    margin: 10px 0;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
 }
 
 .list li.plus {
-    border-right: 5px solid #2ecc71;
+  border-right: 5px solid #2ecc71;
 }
 
 .list li.minus {
-    border-right: 5px solid #c0392b;
+  border-right: 5px solid #c0392b;
 }
 
 .delete-btn {
-    cursor: pointer;
-    background-color: #c0392b;
-    border: 0;
-    color: #fff;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 2px 5px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  background-color: #c0392b;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-.list li:hover .delete-btn {
-    opacity: 1;
+.edit-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 4px 7px;
+  border-radius: 3px;
+  cursor: pointer;
 }
+
+#filter-category,
+#importFile {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[onclick^="exportData"],
+button[onclick^="importData"] {
+  background-color: #4a249d;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+button[onclick^="exportData"]:hover,
+button[onclick^="importData"]:hover {
+  background-color: #361a78;
+}
+
+#expenseChart {
+  margin: 20px auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Responsive */
 @media (max-width: 500px) {
-    main {
-        flex-direction: column;
-        max-width: 95%;
-    }
+  main {
+    max-width: 95%;
+  }
 
-    .container {
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-    }
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
 
-    .row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-    }
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    font-size: 15px;
+    padding: 10px;
+  }
 
-    .section {
-        width: 100%;
-    }
+  .btn,
+  button[onclick^="exportData"],
+  button[onclick^="importData"] {
+    font-size: 15px;
+    padding: 12px;
+  }
 
-    input[type="text"],
-    input[type="number"],
-    input[type="date"],
-    select {
-        font-size: 15px;
-        padding: 10px;
-    }
+  .list li {
+    font-size: 14px;
+  }
 
-    .btn {
-        font-size: 15px;
-        padding: 12px;
-    }
+  .edit-btn,
+  .delete-btn {
+    font-size: 14px;
+  }
 
-    .list li {
-        font-size: 14px;
-    }
+  header {
+    font-size: 1rem;
+    height: auto;
+    padding: 1rem;
+  }
+}
+.form-chart-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
-    .delete-btn {
-        font-size: 16px;
-    }
+#form {
+  flex: 1;
+  min-width: 250px;
+}
 
-    header {
-        font-size: 1rem;
-        height: auto;
-        padding: 1rem;
-    }
+.chart-wrapper {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+#expenseChart {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .form-chart-wrapper {
+    flex-direction: column;
+  }
 }
